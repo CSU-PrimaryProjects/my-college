@@ -60,3 +60,13 @@
   background-color: #f8c5d6;
   color: #ffffff;
 }
+.added-slot{
+  height: 4.5rem;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: #ffffff;
+}

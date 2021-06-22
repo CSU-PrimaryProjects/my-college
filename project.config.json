@@ -39,6 +39,7 @@
   "appid": "wx91d3e9ecdece1f49",
   "projectname": "my-college",
   "libVersion": "2.14.1",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []

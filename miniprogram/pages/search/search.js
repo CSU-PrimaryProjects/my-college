@@ -7,7 +7,13 @@ Page({
   data: {
     value: '',
     active: 'home',
-    schools: null
+    schools: null,
+    active: 'search',
+  },
+  onTabChange(event) {
+    wx.redirectTo({
+      url: `../${event.detail}/${event.detail}`
+    })
   },
   onChange(e) {
     this.setData({

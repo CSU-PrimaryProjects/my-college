@@ -24,5 +24,6 @@
       </view>
     </view>
   </van-cell-group>
-  <view slot="right" class="right-slot">加入心愿单</view>
+  <view slot="right" wx:if="{{!hiddenAdd}}" bindtap="addClick" class="right-slot">加入心愿单</view>
+  <view slot="right" wx:if="{{hiddenAdd}}" bindtap="deleteClick" class="added-slot">移出心愿单</view>
 </van-swipe-cell>

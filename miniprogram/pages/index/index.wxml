@@ -1,8 +1,0 @@
-<filter wx:if="{{active==='filter'}}"></filter>
-<search wx:if="{{active==='search'}}"></search>
-<profile wx:if="{{active==='profile'}}"></profile>
-<van-tabbar active="{{ active }}" bind:change="onTabChange">
-  <van-tabbar-item name="filter" icon="home-o">分数段筛选</van-tabbar-item>
-  <van-tabbar-item name="search" icon="search">查找学校</van-tabbar-item>
-  <van-tabbar-item name="profile" icon="user-o">我的心愿单</van-tabbar-item>
-</van-tabbar>

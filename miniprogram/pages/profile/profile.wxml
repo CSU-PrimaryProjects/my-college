@@ -1,2 +1,14 @@
-<!--miniprogram/pages/profile/profile.wxml-->
-<text>miniprogram/pages/profile/profile.wxml</text>
+<view wx:if="{{active==='profile'}}">
+  <view wx:for="{{schools}}" wx:key="index">
+    <college-item wx:if="{{item.name.length>0}}" name="{{item.name}}" city="{{item.city}}" url="{{item.url}}" imgUrl="{{item.imgUrl}}"
+      leixing="{{item.leixing}}" score="{{item.score}}" labels="{{item.labels}}" hiddenAdd="{{true}}">
+    </college-item>
+  </view>
+</view>
+<search wx:if="{{active==='search'}}"></search>
+<filter wx:if="{{active==='filter'}}"></filter>
+<van-tabbar active="{{ active }}" bind:change="onTabChange">
+  <van-tabbar-item name="profile" icon="user-o">我的心愿单</van-tabbar-item>
+  <van-tabbar-item name="search" icon="search">查找学校</van-tabbar-item>
+  <van-tabbar-item name="filter" icon="home-o">分数段筛选</van-tabbar-item>
+</van-tabbar>

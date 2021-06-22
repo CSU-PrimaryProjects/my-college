@@ -11,12 +11,14 @@ Component({
     leixing: String,
     score: Number,
     labels: String,
+    hiddenAdd: Boolean,
   },
 
   data: {
     list: ['a', 'b', 'c'],
     result: ['a', 'b'],
-    tranLabels: []
+    tranLabels: [],
+    mySchools:[]
   },
   lifetimes: {
     attached: function () {
@@ -26,6 +28,34 @@ Component({
     },
   },
   methods: {
+    addClick() {
+      wx.cloud.callFunction({
+        name: 'addSchool',
+        data: {
+          name: this.properties.name,
+          city: this.properties.city,
+          url: this.properties.url,
+          imgUrl: this.properties.imgUrl,
+          leixing: this.properties.leixing,
+          score: this.properties.score,
+          labels: this.properties.labels,
+        }
+      })
+    },
+
+    deleteClick() {
+      wx.cloud.callFunction({
+        name: 'deleteSchool',
+        data: {
+          theSchoolName:this.properties.name
+        }
+      })
+      
+      wx.redirectTo({
+        url: '../profile/profile'
+      })
+    },
+
     onChange: function (event) {
       this.setData({
         result: event.detail

@@ -16,6 +16,12 @@
   <view wx:for="{{schools}}" wx:key="index">
     <college-item name="{{item.school.source.school}}" city="{{item.school.source.city}}"
       url="{{item.school.source.url}}" imgUrl="{{item.school.source.image}}" leixing="{{item.school.source.leixing}}"
-      score="{{item.school.source.subject.list[0].score}}" labels="{{item.school.source.type}}"></college-item>
+      score="{{item.school.source.subject.list[0].score}}" labels="{{item.school.source.type}}">
+    </college-item>
   </view>
 </view>
+<van-tabbar active="{{ active }}" bind:change="onTabChange">
+  <van-tabbar-item name="profile" icon="user-o">我的心愿单</van-tabbar-item>
+  <van-tabbar-item name="search" icon="search">查找学校</van-tabbar-item>
+  <van-tabbar-item name="filter" icon="home-o">分数段筛选</van-tabbar-item>
+</van-tabbar>

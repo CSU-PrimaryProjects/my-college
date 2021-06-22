@@ -5,14 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    schools: [],
+    active: 'profile',
   },
 
+  onTabChange(event) {
+    wx.redirectTo({
+      url: `../${event.detail}/${event.detail}`
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.cloud.callFunction({
+      name: 'getProfile',
+    }).then((res)=>{
+      console.log(res);
+      res.result.data[0]?this.setData({
+        schools: res.result.data[0].schools
+      }):{}
+    })
   },
 
   /**
