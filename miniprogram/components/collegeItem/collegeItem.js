@@ -4,14 +4,27 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    name:String
+    name: String,
+    city: String,
+    url: String,
+    imgUrl: String,
+    leixing: String,
+    score: Number,
+    labels: String,
   },
 
   data: {
     list: ['a', 'b', 'c'],
-    result: ['a', 'b']
+    result: ['a', 'b'],
+    tranLabels: []
   },
-
+  lifetimes: {
+    attached: function () {
+      this.setData({
+        tranLabels: this.properties.labels.split(";")
+      });
+    },
+  },
   methods: {
     onChange: function (event) {
       this.setData({

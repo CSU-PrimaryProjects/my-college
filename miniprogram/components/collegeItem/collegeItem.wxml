@@ -1,18 +1,28 @@
-<view>
-  <!-- 头像图 -->
-  <view></view>
-  <!-- 右侧信息容器 -->
-  <view>
-    <!-- 院校名称 -->
-    <view>
-      {{name}}
+<van-swipe-cell right-width="{{ 100 }}">
+  <van-cell-group class="row-container">
+    <view class="item-container">
+      <view class="content">
+        <view class="imgDiv">
+          <image src="{{imgUrl}}" class="img"></image>
+        </view>
+        <view class="text">
+          <view class="name">
+            {{name}}
+            <van-tag plain>{{city}}</van-tag>
+          </view>
+          <view class="tags">
+            <van-tag color="#f2826a">{{leixing}}</van-tag>
+          </view>
+          <view>
+            <van-tag wx:for="{{tranLabels}}" color="#ffe1e1" text-color="#ad0000" class="label-item">{{item}}</van-tag>
+          </view>
+        </view>
+      </view>
+      <view class="score">
+        <view class="score-text">{{score}}</view>
+        <view class="danwei">分</view>
+      </view>
     </view>
-    <!-- 标签 -->
-    <view></view>
-  </view>
-  <!-- 操作栏 -->
-  <view>
-    <!-- 选择框 -->
-    <view></view>
-  </view>
-</view>
+  </van-cell-group>
+  <view slot="right" class="right-slot">加入心愿单</view>
+</van-swipe-cell>

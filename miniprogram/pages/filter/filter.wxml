@@ -13,7 +13,9 @@
         bind:change="onChange" />
     </van-cell-group>
   </view>
-  <view>
-  <college-item></college-item>
+  <view wx:for="{{schools}}" wx:key="index">
+    <college-item name="{{item.school.source.school}}" city="{{item.school.source.city}}"
+      url="{{item.school.source.url}}" imgUrl="{{item.school.source.image}}" leixing="{{item.school.source.leixing}}"
+      score="{{item.school.source.subject.list[0].score}}" labels="{{item.school.source.type}}"></college-item>
   </view>
 </view>

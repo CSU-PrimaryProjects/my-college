@@ -7,7 +7,7 @@ Page({
   data: {
     value: '',
     active: 'home',
-    schools: []
+    schools: null
   },
   onChange(e) {
     this.setData({
@@ -36,11 +36,10 @@ Page({
       }
     ).get({
       success: res => {
-        console.log('[数据库] [查询记录] 成功: ', res);
         this.setData({
-          schools: schools,
+          schools: res.data,
         });
-        console.log(schools);
+        console.log('[数据库] [查询记录] 成功: ',res.data);
       },
       fail: err => {
         console.error('[数据库] [查询记录] 失败：', err)
