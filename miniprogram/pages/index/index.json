@@ -1,6 +1,9 @@
 {
   "usingComponents": {
-    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
-    "van-dropdown-item": "@vant/weapp/dropdown-item/index"
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "filter":"../filter/filter",
+    "search":"../search/search",
+    "profile":"../profile/profile"
   }
 }

@@ -1,0 +1,18 @@
+<view>
+  <!-- 头像图 -->
+  <view></view>
+  <!-- 右侧信息容器 -->
+  <view>
+    <!-- 院校名称 -->
+    <view>
+      {{name}}
+    </view>
+    <!-- 标签 -->
+    <view></view>
+  </view>
+  <!-- 操作栏 -->
+  <view>
+    <!-- 选择框 -->
+    <view></view>
+  </view>
+</view>

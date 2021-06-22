@@ -32,14 +32,9 @@
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
-    "minifyWXSS": true,
-    "packNpmManually": true,
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./miniprogram/"
-      }
-    ]
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
   },
   "appid": "wx91d3e9ecdece1f49",
   "projectname": "my-college",

@@ -1,0 +1,46 @@
+.provincesMenuContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.provincesMenu {
+  width: 6rem;
+}
+
+.van-dropdown-menu__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.scoresContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.scoresInput {
+  height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.lineContainer {
+  height: 3rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  width: 0.6rem;
+  border-top: solid 1px #999999;
+}

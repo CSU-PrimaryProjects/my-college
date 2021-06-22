@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="provincesMenuContainer">
+    <van-dropdown-menu class="provincesMenu">
+      <van-dropdown-item value="{{ value1 }}" options="{{ provinces }}" />
+    </van-dropdown-menu>
+    <van-cell-group class="scoresContainer">
+      <van-field value="{{ value }}" class="scoresInput" input-align="center" border="{{false}}" placeholder="起始分数"
+        bind:change="onChange" />
+      <view class="lineContainer">
+        <view class="line"></view>
+      </view>
+      <van-field value="{{ value }}" class="scoresInput" input-align="center" border="{{false}}" placeholder="截至分数"
+        bind:change="onChange" />
+    </van-cell-group>
+  </view>
+  <view>
+  <college-item></college-item>
+  </view>
+</view>
