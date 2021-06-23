@@ -1,25 +1,26 @@
 <view class="container">
-  <view class="provincesMenuContainer">
+  <view class="provincesMenuContainer" >
     <van-dropdown-menu class="provincesMenu">
       <van-dropdown-item value="{{ value1 }}" options="{{ provinces }}" />
     </van-dropdown-menu>
     <van-cell-group class="scoresContainer">
-      <van-field value="{{ value }}" class="scoresInput" input-align="center" border="{{false}}" placeholder="起始分数"
-        bind:change="onChange" />
+      <van-field value="{{ start }}" class="scoresInput" input-align="center" border="{{false}}" placeholder="起始分数"
+        bindinput="onChangeStart" />
       <view class="lineContainer">
         <view class="line"></view>
       </view>
-      <van-field value="{{ value }}" class="scoresInput" input-align="center" border="{{false}}" placeholder="截至分数"
-        bind:change="onChange" />
+      <van-field value="{{ end }}" class="scoresInput" input-align="center" border="{{false}}" placeholder="截至分数"
+        bindinput="onChangeEnd" bindconfirm="onEnter" />
     </van-cell-group>
   </view>
   <view wx:for="{{schools}}" wx:key="index">
-    <college-item name="{{item.school.source.school}}" city="{{item.school.source.city}}"
-      url="{{item.school.source.url}}" imgUrl="{{item.school.source.image}}" leixing="{{item.school.source.leixing}}"
-      score="{{item.school.source.subject.list[0].score}}" labels="{{item.school.source.type}}">
+    <college-item name="{{item.name}}" city="{{item.city}}" url="{{item.url}}" imgUrl="{{item.imgUrl}}"
+      leixing="{{item.leixing}}" score="{{item.score}}" labels="{{item.labels}}">
     </college-item>
   </view>
+
 </view>
+<view class="bottomBg"></view>
 <van-tabbar active="{{ active }}" bind:change="onTabChange">
   <van-tabbar-item name="profile" icon="user-o">我的心愿单</van-tabbar-item>
   <van-tabbar-item name="search" icon="search">查找学校</van-tabbar-item>

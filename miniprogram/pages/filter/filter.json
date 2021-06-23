@@ -5,6 +5,7 @@
     "van-field": "@vant/weapp/field/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",
-    "college-item":"../../components/collegeItem/collegeItem"
+    "college-item": "../../components/collegeItem/collegeItem",
+    "van-dialog": "@vant/weapp/dialog/index"
   }
 }

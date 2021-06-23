@@ -1,1 +1,8 @@
-/* miniprogram/pages/search.wxss */
+.search{
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+.bottomBg{
+  height: 3rem;
+}

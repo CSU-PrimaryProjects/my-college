@@ -5,6 +5,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 }
 
 .provincesMenu {
@@ -43,4 +46,8 @@
 .line {
   width: 0.6rem;
   border-top: solid 1px #999999;
+}
+
+.bottomBg{
+  height: 3rem;
 }

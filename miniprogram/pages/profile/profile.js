@@ -20,12 +20,30 @@ Page({
   onLoad: function (options) {
     wx.cloud.callFunction({
       name: 'getProfile',
-    }).then((res)=>{
-      console.log(res);
-      res.result.data[0]?this.setData({
+    }).then((res) => {
+      res.result.data[0] ? this.setData({
         schools: res.result.data[0].schools
-      }):{}
+      }) : {}
     })
+
+    try {
+      let localSchools = wx.getStorageSync('schools');
+      if (!localSchools){
+        const db = wx.cloud.database();
+        db.collection('allDetails')
+          .skip(0) //从第几个数据开始
+          .limit(1)
+          .get({
+            success: res => {
+              wx.setStorageSync('schools', res.data)
+            },
+          })
+
+        console.log("缓存为空")
+      }
+    } catch (e) {
+      console.log("error")
+    }
   },
 
   /**
