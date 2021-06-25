@@ -62,6 +62,10 @@ Page({
       searching: true
     })
 
+    this.setData({
+      schools: []
+    })
+
     if (this.data.end - this.data.start > 0 && this.data.end - this.data.start < 100) {
       this.data.localSchools.map(item => {
         if (item.score > this.data.start && item.score < this.data.end) {

@@ -50,6 +50,10 @@ Page({
     let reg = new RegExp(this.data.value);
 
     this.setData({
+      schools: []
+    })
+
+    this.setData({
       searching:true
     })
 
